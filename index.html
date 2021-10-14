@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <script type="text/javascript" src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+  <img src="/qrcode-js-master/images/Kadingilan.png" alt="">
+  <h3>Municipality of Kadingilan</h3>
+  <h1>KADINGILAN QR CODE GENERATOR</h1>
+</div>
+
+  <img src="/qrcode-js-master/images/back1.jpg" id="image" alt="">
+  <h3>Please Enter Your Details Below</h3>
+  <h2>Note: Please fill up the form below.<br> Do not click the button unless you are finished fill up the form.</h2>
+    <form id="qrForm" onsubmit="return false;" method="POST">
+      <div class="inputContainer">
+
+        <label for="dataInput">Name</label>
+        <input type="text" onchange="updateQrData();" name="fname" class="textbox" id="dataInput" placeholder="Enter your First Name and Last name" required>
+
+        <label for="dataInput">Date of Birth</label>
+        <input type="text" onchange="updateQrdob();" name="birthday" class="textbox" id="dob" placeholder="Month/Date/Year">
+
+        <label for="dataInput">Age</label>
+        <input type="text" onchange="updateQrage();" name="age" class="textbox" id="age" placeholder="Enter your Age">
+
+        <label for="dataInput">Address</label>
+        <input type="text" onchange="updateQradd();" name="address" class="textbox" id="add" placeholder="Enter your Full Address">
+
+        <label for="dataInput">Gender</label>
+        <input type="text" onchange="updateQrblank();" name="gender" class="textbox" id="blank" placeholder="Male/Female">
+      </div>
+    </form>
+
+    <button id="formButton" onclick="download();">Generate QR Code</button>
+<script type="text/javascript" src="qr.js"></script>
+</body>
+</html>
